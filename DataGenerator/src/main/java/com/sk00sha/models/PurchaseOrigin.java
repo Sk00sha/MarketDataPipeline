@@ -1,4 +1,4 @@
-package com.sk00sha.kafkaStreaming.invoice;
+package com.sk00sha.models;
 
 public enum PurchaseOrigin {
     ONLINE,

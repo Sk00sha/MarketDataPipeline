@@ -1,7 +1,9 @@
 package com.sk00sha;
 
+import com.sk00sha.fileReader.FileLoader;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        new FileLoader();
     }
 }
