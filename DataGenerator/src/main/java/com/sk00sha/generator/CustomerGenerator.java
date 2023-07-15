@@ -8,15 +8,21 @@ public class CustomerGenerator implements GenericDataGenerator<Customer> {
     @Override
     public Customer generateSpecificObject(String name, String id, String address) {
 
-        return new Customer(Integer.getInteger(id),1,name, Gender.MALE,address);
+        return new Customer(Integer.getInteger(id),generateRandomCityID(),name, Gender.MALE,address);
     }
+
+    /**
+     * Based on the customer file and each objects pos. in the list
+     * @param id
+     * @return
+     */
     private Gender generateRandomGender(int id){
-        if(id % 3==0){
+        if(id % 3==0 && id!=0){
             return Gender.MALE;
         }
         return Gender.FEMALE;
     }
-    private int generateRandomCityID(int id){
+    private int generateRandomCityID(){
         return RandomNumber.getRandomIntNumber(0,100);
     }
 }

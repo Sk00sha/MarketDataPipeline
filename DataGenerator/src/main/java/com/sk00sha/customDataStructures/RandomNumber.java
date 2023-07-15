@@ -6,5 +6,9 @@ public class RandomNumber {
         Random randomNumber = new Random();
         return randomNumber.nextInt(max - min + 1) + min;
     }
+    public static float getRandomFloatNumber(int min,int max){
+        Random randomNumber = new Random();
+        return randomNumber.nextFloat(max - min + 1) + min;
+    }
 
 }

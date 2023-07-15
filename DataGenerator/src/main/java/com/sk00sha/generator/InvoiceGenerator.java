@@ -23,8 +23,8 @@ public class InvoiceGenerator implements GenericDataGenerator<Invoice> {
                 ,dateOfPurchase,paymentMethod, originOfPurchase
                 ,category, BigDecimal.ONE);
     }
-    public void setSharedProperty(int customerId,String paymentMethod, String dateOfPurchase, String originOfPurchase){
-        setCustomerId(customerId);
+    public void setSharedProperty(String customerId,String paymentMethod, String dateOfPurchase, String originOfPurchase){
+        setCustomerId(Integer.getInteger(customerId));
         setDateOfPurchase(paymentMethod);
         setPaymentMethod(dateOfPurchase);
         setOriginOfPurchase(originOfPurchase);

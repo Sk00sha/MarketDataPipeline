@@ -2,14 +2,15 @@ package com.sk00sha;
 
 import com.sk00sha.customDataStructures.RandomNumber;
 import com.sk00sha.fileReader.FileLoader;
+import com.sk00sha.generator.GeneratorRunner;
 
 public class Main {
     public static void main(String[] args) {
         FileLoader loader = new FileLoader();
         try {
-            var data = loader.accessListOfTriplets("DataGenerator/src/main/resources/customer.txt");
-            System.out.println(RandomNumber.getRandomIntNumber(0, 40));
-            System.out.println(data.get(data.size()-1));
+            var customers = loader.accessListOfTriplets("DataGenerator/src/main/resources/customer.txt");
+            var items = loader.accessListOfTriplets("DataGenerator/src/main/resources/items.txt");
+            GeneratorRunner runner= new GeneratorRunner(items,customers);
         }catch (NullPointerException e){
             e.printStackTrace();
         }
