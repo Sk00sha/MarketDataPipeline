@@ -14,11 +14,11 @@ import java.math.BigDecimal;
 public class Invoice {
     private String invoiceId;
     private int customerId;
-    private int quantity;
+    private String itemName;
     private int itemID;
     private String dateOfPurchase;
     private String paymentMethod;
-    private PurchaseOrigin origin;
+    private String origin;
     private String category;
     private BigDecimal price;
 }
