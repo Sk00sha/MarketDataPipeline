@@ -8,7 +8,7 @@
 5. Write Flink Streaming job for data transformation
 6. Spark Batch jobs for MinIO data transformations and SparkSQL analytics
 7. (Optional) Write React dashboard for data viz.
-
+8. Srping Boot backend REST API
 
 ## Simple architecture diagram
 ![alt text](https://github.com/Sk00sha/MarketDataPipeline/blob/main/FullStackData.PNG)
