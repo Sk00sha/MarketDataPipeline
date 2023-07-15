@@ -1,0 +1,100 @@
+Toaster:1:Kitchen Appliances
+Blender:2:Kitchen Appliances
+Coffee maker:3:Kitchen Appliances
+Microwave:4:Kitchen Appliances
+Vacuum cleaner:5:Cleaning Appliances
+Iron:6:Cleaning Appliances
+Hairdryer:7:Personal Care Appliances
+Electric kettle:8:Kitchen Appliances
+Food processor:9:Kitchen Appliances
+Air purifier:10:Cleaning Appliances
+Washing machine:11:Laundry Appliances
+Dishwasher:12:Kitchen Appliances
+Refrigerator:13:Kitchen Appliances
+Oven:14:Kitchen Appliances
+Slow cooker:15:Kitchen Appliances
+Rice cooker:16:Kitchen Appliances
+Hand mixer:17:Kitchen Appliances
+Bread maker:18:Kitchen Appliances
+Juicer:19:Kitchen Appliances
+Can opener:20:Kitchen Appliances
+Toaster oven:21:Kitchen Appliances
+Stand mixer:22:Kitchen Appliances
+Waffle maker:23:Kitchen Appliances
+Electric grill:24:Kitchen Appliances
+Electric fan:25:Cooling Appliances
+Humidifier:26:Cleaning Appliances
+Dehumidifier:27:Cleaning Appliances
+Steam mop:28:Cleaning Appliances
+Clothes steamer:29:Laundry Appliances
+Electric toothbrush:30:Personal Care Appliances
+Electric shaver:31:Personal Care Appliances
+Hair straightener:32:Personal Care Appliances
+Curling iron:33:Personal Care Appliances
+Electric blanket:34:Bedding Appliances
+Air conditioner:35:Cooling Appliances
+Heater:36:Heating Appliances
+Clothes dryer:37:Laundry Appliances
+Garbage disposal:38:Kitchen Appliances
+Water filter pitcher:39:Kitchen Appliances
+Blender bottle:40:Kitchen Accessories
+Handheld vacuum cleaner:41:Cleaning Appliances
+Ironing board:42:Cleaning Accessories
+Vacuum storage bags:43:Storage Accessories
+Laundry hamper:44:Storage Accessories
+Step ladder:45:Tools
+Broom:46:Cleaning Tools
+Dustpan:47:Cleaning Tools
+Mop:48:Cleaning Tools
+Bucket:49:Cleaning Tools
+Toilet brush:50:Cleaning Tools
+Plunger:51:Cleaning Tools
+Shower curtain:52:Bathroom Accessories
+Soap dispenser:53:Bathroom Accessories
+Tissue box:54:Bathroom Accessories
+Trash can:55:Trash and Recycling
+Paper towel holder:56:Kitchen Accessories
+Cutting board:57:Kitchen Accessories
+Knife set:58:Kitchen Accessories
+Mixing bowls:59:Kitchen Accessories
+Measuring cups and spoons:60:Kitchen Accessories
+Pots and pans:61:Kitchen Accessories
+Cooking utensils (spatula:whisk:tongs:etc.):62:Kitchen Accessories
+Canisters:63:Kitchen Accessories
+Dish rack:64:Kitchen Accessories
+Utensil holder:65:Kitchen Accessories
+Food storage containers:66:Kitchen Accessories
+Ice cube trays:67:Kitchen Accessories
+Colander:68:Kitchen Accessories
+Bakeware (baking sheets:cake pans:etc.):69:Kitchen Accessories
+Roasting pan:70:Kitchen Accessories
+Salad spinner:71:Kitchen Accessories
+Grater:72:Kitchen Accessories
+Peeler:73:Kitchen Accessories
+Oven mitts:74:Kitchen Accessories
+Tea towels:75:Kitchen Accessories
+Dish towels:76:Kitchen Accessories
+Pot holders:77:Kitchen Accessories
+Coffee mugs:78:Kitchen Accessories
+Plates:79:Kitchen Accessories
+Bowls:80:Kitchen Accessories
+Glasses:81:Kitchen Accessories
+Wine glasses:82:Kitchen Accessories
+Silverware (forks:knives:spoons):83:Kitchen Accessories
+Cutting knives:84:Kitchen Accessories
+Salt and pepper shakers:85:Kitchen Accessories
+Serving trays:86:Kitchen Accessories
+Napkin holder:87:Kitchen Accessories
+Coasters:88:Kitchen Accessories
+Trash bags:89:Trash and Recycling
+Laundry detergent:90:Laundry Supplies
+Fabric softener:91:Laundry Supplies
+Stain remover:92:Laundry Supplies
+All-purpose cleaner:93:Cleaning Supplies
+Glass cleaner:94:Cleaning Supplies
+Dish soap:95:Cleaning Supplies
+Hand soap:96:Bathroom Accessories
+Toilet paper:97:Bathroom Accessories
+Facial tissues:98:Bathroom Accessories
+Air freshener:99:Cleaning Supplies
+Light bulbs:100:Lighting Accessories
