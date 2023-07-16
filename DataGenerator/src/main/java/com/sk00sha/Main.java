@@ -11,6 +11,7 @@ public class Main {
             var customers = loader.accessListOfTriplets("DataGenerator/src/main/resources/customer.txt");
             var items = loader.accessListOfTriplets("DataGenerator/src/main/resources/items.txt");
             GeneratorRunner runner= new GeneratorRunner(items,customers);
+            runner.runGenerators();
         }catch (NullPointerException e){
             e.printStackTrace();
         }

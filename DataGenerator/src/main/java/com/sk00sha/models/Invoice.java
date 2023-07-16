@@ -6,11 +6,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Data
 @Setter
 @Getter
-@AllArgsConstructor
 public class Invoice {
     private String invoiceId;
     private int customerId;
@@ -21,4 +21,65 @@ public class Invoice {
     private String origin;
     private String category;
     private BigDecimal price;
+
+    public Invoice(InvoiceBuilder builder) {
+        this.customerId = builder.customerId;
+        this.itemName = builder.itemName;
+        this.itemID = builder.itemID;
+        this.category = builder.category;
+        this.dateOfPurchase = builder.dateOfPurchase;
+        this.origin = builder.origin;
+        this.price = builder.price;
+        this.paymentMethod = builder.paymentMethod;
+        this.invoiceId=builder.invoiceId;
+    }
+
+    public static class InvoiceBuilder{
+        private String invoiceId;
+        private int customerId;
+        private String itemName;
+        private int itemID;
+        private String category;
+        /**
+         * -----OPTIONALS----
+         */
+        private String dateOfPurchase;
+        private String paymentMethod;
+        private String origin;
+        private BigDecimal price;
+        public InvoiceBuilder(int id,int customerId, String itemName,String category) {
+            this.itemID = id;
+            this.customerId = customerId;
+            this.itemName = itemName;
+            this.category = category;
+            this.invoiceId= UUID.randomUUID().toString();
+
+        }
+
+        public InvoiceBuilder addDateOfPurchase(String dateOfPurchase) {
+            this.dateOfPurchase = dateOfPurchase;
+            return this;
+        }
+
+        public InvoiceBuilder addPaymentMethod(String paymentMethod) {
+            this.paymentMethod = paymentMethod;
+            return this;
+        }
+
+        public InvoiceBuilder addOrigin(String origin) {
+            this.origin = origin;
+            return this;
+        }
+
+        public InvoiceBuilder addPrice(BigDecimal price) {
+            this.price = price;
+            return this;
+        }
+
+        public Invoice build(){
+            return new Invoice(this);
+        }
+
+    }
+
 }

@@ -4,13 +4,12 @@ import com.sk00sha.customDataStructures.RandomNumber;
 import com.sk00sha.models.Customer;
 import com.sk00sha.models.Gender;
 
-public class CustomerGenerator implements GenericDataGenerator<Customer> {
+public class CustomerGenerator implements GenericDataGenerator<Customer, Customer.CustomerBuilder> {
+
     @Override
-    public Customer generateSpecificObject(String name, String id, String address) {
-
-        return new Customer(Integer.getInteger(id),generateRandomCityID(),name, Gender.MALE,address);
+    public Customer generateSpecificObject(Customer.CustomerBuilder objectToGenerate,int randomPosition) {
+        return null;
     }
-
     /**
      * Based on the customer file and each objects pos. in the list
      * @param id
@@ -25,4 +24,6 @@ public class CustomerGenerator implements GenericDataGenerator<Customer> {
     private int generateRandomCityID(){
         return RandomNumber.getRandomIntNumber(0,100);
     }
+
+
 }
