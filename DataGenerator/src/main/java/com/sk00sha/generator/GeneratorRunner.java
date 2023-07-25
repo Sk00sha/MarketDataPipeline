@@ -3,6 +3,8 @@ package com.sk00sha.generator;
 import com.sk00sha.customDataStructures.MyTriplet;
 import com.sk00sha.customDataStructures.RandomNumber;
 import com.sk00sha.models.Customer;
+import com.sk00sha.models.Invoice;
+
 
 import java.util.List;
 
@@ -28,25 +30,30 @@ public class GeneratorRunner {
 
     }
     public void runGenerators(){
+        var randomUserAtIndex = RandomNumber.getRandomIntNumber(0,39);
+        var randomItemAtIndex = RandomNumber.getRandomIntNumber(0,99);
+
         InvoiceGenerator generatorOfInvoices = new InvoiceGenerator();
         CustomerGenerator generatorOfCustomers = new CustomerGenerator();
 
-        Customer customer = new Customer.CustomerBuilder(
-                returnFromArrayIndex(this.customerList,1,1)
-                ,returnFromArrayIndex(this.customerList,0,1)
-                ,returnFromArrayIndex(this.customerList,2,1))
-                .addCityID(1).build();
+        Customer customer = generatorOfCustomers.generateSpecificObject(new Customer.CustomerBuilder(
+                returnFromArrayIndex(this.customerList,1,randomUserAtIndex)
+                ,returnFromArrayIndex(this.customerList,0,randomUserAtIndex)
+                ,returnFromArrayIndex(this.customerList,2,randomUserAtIndex)
+                ),randomUserAtIndex);
 
-/*
-        while(true){
-            var randomItemAtIndex = RandomNumber.getRandomIntNumber(0,99);
-            var randomUserAtIndex = RandomNumber.getRandomIntNumber(0,39);
-            Customer customer = new Customer.CustomerBuilder(
-                    Integer.getInteger(returnFromArrayIndex(1,randomUserAtIndex))
-                    ,returnFromArrayIndex(2,randomUserAtIndex)
-                    ,returnFromArrayIndex(3,randomUserAtIndex)).build();
 
-        }*/
+        //Should remake to proper types in objects but no time(id should be int and not String)
+        Invoice invoice = generatorOfInvoices.generateSpecificObject(
+                new Invoice.InvoiceBuilder(
+                        returnFromArrayIndex(this.itemList,1,randomItemAtIndex),
+                        customer.getId(),
+                        returnFromArrayIndex(this.itemList,0,randomItemAtIndex)
+                        ,returnFromArrayIndex(this.itemList,2,randomItemAtIndex))
+                ,randomItemAtIndex);
+
+        System.out.println(customer);
+        System.out.println(invoice);
     }
 
 }

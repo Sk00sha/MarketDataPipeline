@@ -2,6 +2,8 @@ package com.sk00sha.generator;
 
 import com.sk00sha.models.Invoice;
 import lombok.Setter;
+import com.sk00sha.customDataStructures.RandomNumber;
+import java.math.BigDecimal;
 
 
 /**
@@ -9,19 +11,35 @@ import lombok.Setter;
  */
 @Setter
 public class InvoiceGenerator implements GenericDataGenerator<Invoice, Invoice.InvoiceBuilder> {
-    private int customerId;
-    private String paymentMethod;
-    private String dateOfPurchase;
-    private String originOfPurchase;
+
     @Override
     public Invoice generateSpecificObject(Invoice.InvoiceBuilder objectToGenerate,int randomPosition) {
+        return objectToGenerate
+                .addDateOfPurchase(setDateOfPurchase(randomPosition))
+                .addOrigin(setOriginOfPurchase(randomPosition))
+                .addPrice(setPrice(randomPosition))
+                .addPaymentMethod(setPaymentMethod(randomPosition))
+                .build();
+    }
+
+    private String setDateOfPurchase(int randomPosition) {
         return null;
     }
-    public void setSharedProperty(String customerId,String paymentMethod, String dateOfPurchase, String originOfPurchase){
-        setCustomerId(Integer.getInteger(customerId));
-        setDateOfPurchase(paymentMethod);
-        setPaymentMethod(dateOfPurchase);
-        setOriginOfPurchase(originOfPurchase);
+
+    private String setPaymentMethod(int randomPosition){
+
+        return null;
+    }
+    private String setOriginOfPurchase(int randomPosition){
+
+        return null;
+    }
+    private BigDecimal setPrice(int randomPosition){
+
+        return BigDecimal.valueOf(RandomNumber.getRandomIntNumber(0,1000));
+    }
+    private boolean isEven(int number) {
+        return number % 2 == 0;
     }
 
 

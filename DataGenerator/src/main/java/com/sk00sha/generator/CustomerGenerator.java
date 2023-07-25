@@ -8,7 +8,9 @@ public class CustomerGenerator implements GenericDataGenerator<Customer, Custome
 
     @Override
     public Customer generateSpecificObject(Customer.CustomerBuilder objectToGenerate,int randomPosition) {
-        return null;
+        return objectToGenerate
+                .addGender(generateRandomGender(randomPosition))
+                .addCityID(generateRandomCityID()).build();
     }
     /**
      * Based on the customer file and each objects pos. in the list
@@ -16,10 +18,15 @@ public class CustomerGenerator implements GenericDataGenerator<Customer, Custome
      * @return
      */
     private Gender generateRandomGender(int id){
-        if(id % 3==0 && id!=0){
+        if(id == 0 ){
+            return Gender.MALE;
+        } else if (isEven(id)) {
             return Gender.MALE;
         }
         return Gender.FEMALE;
+    }
+    private boolean isEven(int number) {
+        return number % 2 == 0;
     }
     private int generateRandomCityID(){
         return RandomNumber.getRandomIntNumber(0,100);

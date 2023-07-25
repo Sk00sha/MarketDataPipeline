@@ -13,9 +13,9 @@ import java.util.UUID;
 @Getter
 public class Invoice {
     private String invoiceId;
-    private int customerId;
+    private String customerId;
     private String itemName;
-    private int itemID;
+    private String itemID;
     private String dateOfPurchase;
     private String paymentMethod;
     private String origin;
@@ -36,9 +36,9 @@ public class Invoice {
 
     public static class InvoiceBuilder{
         private String invoiceId;
-        private int customerId;
+        private String customerId;
         private String itemName;
-        private int itemID;
+        private String itemID;
         private String category;
         /**
          * -----OPTIONALS----
@@ -47,7 +47,8 @@ public class Invoice {
         private String paymentMethod;
         private String origin;
         private BigDecimal price;
-        public InvoiceBuilder(int id,int customerId, String itemName,String category) {
+        public InvoiceBuilder(String id,String customerId, String itemName,String category) {
+
             this.itemID = id;
             this.customerId = customerId;
             this.itemName = itemName;
